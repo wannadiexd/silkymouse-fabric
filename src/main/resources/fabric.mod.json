@@ -9,7 +9,7 @@
     "dries007 (original author)"
   ],
   "license": "MIT",
-  "icon": "assets/tapemouse/icon.png",
+  "icon": "logo.png",
   "environment": "client",
   "entrypoints": {
     "client": [

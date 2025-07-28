@@ -11,7 +11,6 @@ public class MinecraftClientMixin {
     
     @Inject(method = "isWindowFocused", at = @At("HEAD"), cancellable = true)
     private void isWindowFocused(CallbackInfoReturnable<Boolean> cir) {
-        // Make the game think the window is always focused for our key simulation
         cir.setReturnValue(true);
     }
 }
