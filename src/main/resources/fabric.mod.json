@@ -5,11 +5,10 @@
   "name": "TapeMouse",
   "description": "Tapemouse port for Fabric",
   "authors": [
-    "wannadiexd",
-    "dries007 (original author)"
+    "wannadiexd"
   ],
   "license": "MIT",
-  "icon": "logo.png",
+  "icon": "src/main/resources/logo.png",
   "environment": "client",
   "entrypoints": {
     "client": [
