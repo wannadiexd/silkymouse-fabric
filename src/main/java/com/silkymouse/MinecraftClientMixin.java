@@ -1,4 +1,4 @@
-package com.wannadiexd.tapemouse.mixin;
+package com.wannadiexd.silkymouse.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

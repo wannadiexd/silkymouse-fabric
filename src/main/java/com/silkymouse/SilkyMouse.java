@@ -1,4 +1,4 @@
-package com.wannadiexd.tapemouse;
+package com.wannadiexd.silkymouse;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
@@ -25,8 +25,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TapeMouse implements ClientModInitializer {
-    public static final String MOD_ID = "tapemouse";
+public class SilkyMouse implements ClientModInitializer {
+    public static final String MOD_ID = "silkymouse";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     private static KeyBinding activeBinding = null;
@@ -36,7 +36,7 @@ public class TapeMouse implements ClientModInitializer {
     
     @Override
     public void onInitializeClient() {
-        LOGGER.info("Tapemouse initialized");
+        LOGGER.info("SilkyMouse initialized");
         
         ClientCommandRegistrationCallback.EVENT.register(this::registerCommands);
     
@@ -62,12 +62,12 @@ public class TapeMouse implements ClientModInitializer {
         });
         
         
-        LOGGER.info("Tapemouse setup completed");
+        LOGGER.info("SilkyMouse setup completed");
     }
     
     private void registerCommands(CommandDispatcher<FabricClientCommandSource> dispatcher, CommandRegistryAccess registryAccess) {
         dispatcher.register(
-            ClientCommandManager.literal("tapemouse")
+            ClientCommandManager.literal("silkymouse")
                 .executes(this::showHelp)
                 .then(ClientCommandManager.literal("list")
                     .executes(this::listKeybinds))
@@ -88,10 +88,10 @@ public class TapeMouse implements ClientModInitializer {
     private int showHelp(CommandContext<FabricClientCommandSource> context) {
         FabricClientCommandSource source = context.getSource();
         
-        source.sendFeedback(Text.literal("Tapemouse help: ").setStyle(Style.EMPTY.withColor(Formatting.AQUA)));
-        source.sendFeedback(Text.literal("Run '/tapemouse list' to get a list of keybindings."));
-        source.sendFeedback(Text.literal("Run '/tapemouse off' to stop Tapemouse."));
-        source.sendFeedback(Text.literal("Run '/tapemouse <binding> <delay>' to start Tapemouse."));
+        source.sendFeedback(Text.literal("SilkyMouse help: ").setStyle(Style.EMPTY.withColor(Formatting.AQUA)));
+        source.sendFeedback(Text.literal("Run '/silkymouse list' to get a list of keybindings."));
+        source.sendFeedback(Text.literal("Run '/silkymouse off' to stop SilkyMouse."));
+        source.sendFeedback(Text.literal("Run '/silkymouse <binding> <delay>' to start SilkyMouse."));
         source.sendFeedback(Text.literal("  delay is the number of ticks between every keypress. Set to 0 to hold down the key."));
         
         return 1;
@@ -117,13 +117,13 @@ public class TapeMouse implements ClientModInitializer {
                 activeBinding.setPressed(false);
             }
             
-            context.getSource().sendFeedback(Text.literal("Tapemouse disabled").setStyle(Style.EMPTY.withColor(Formatting.GREEN)));
-            LOGGER.info("Tapemouse disabled via command");
+            context.getSource().sendFeedback(Text.literal("SilkyMouse disabled").setStyle(Style.EMPTY.withColor(Formatting.GREEN)));
+            LOGGER.info("SilkyMouse disabled via command");
             
             activeBinding = null;
             counter = 0;
         } else {
-            context.getSource().sendFeedback(Text.literal("Tapemouse was not active").setStyle(Style.EMPTY.withColor(Formatting.YELLOW)));
+            context.getSource().sendFeedback(Text.literal("SilkyMouse was not active").setStyle(Style.EMPTY.withColor(Formatting.YELLOW)));
         }
         
         return 1;
@@ -172,7 +172,7 @@ public class TapeMouse implements ClientModInitializer {
             delay = newDelay;
             counter = 0;
             
-            String message = "Tapemouse enabled for " + targetBinding.getTranslationKey().replaceFirst("^key\\.", "") + 
+            String message = "SilkyMouse enabled for " + targetBinding.getTranslationKey().replaceFirst("^key\\.", "") + 
                     " (" + targetBinding.getBoundKeyLocalizedText().getString() + ")";
             message += " with delay " + delay;
             

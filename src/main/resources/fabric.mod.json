@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "id": "tapemouse",
+  "id": "silkymouse",
   "version": "${version}",
-  "name": "TapeMouse",
-  "description": "Tapemouse port for Fabric",
+  "name": "SilkyMouse",
+  "description": "Automatically presses keys with configurable delay",
   "authors": [
     "wannadiexd"
   ],
   "license": "MIT",
-  "icon": "assets/tapemouse/logo.png",
+  "icon": "assets/silkymouse/logo.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.wannadiexd.tapemouse.TapeMouse"
+      "com.wannadiexd.silkymouse.SilkyMouse"
     ]
   },
   "mixins": [
-    "tapemouse.mixins.json"
+    "silkymouse.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.16.0",
