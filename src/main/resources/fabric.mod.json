@@ -8,7 +8,7 @@
     "wannadiexd"
   ],
   "license": "MIT",
-  "icon": "assets/tapemouse/icon.png",
+  "icon": "assets/tapemouse/logo.png",
   "environment": "client",
   "entrypoints": {
     "client": [
