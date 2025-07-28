@@ -1,21 +1,26 @@
 {
   "schemaVersion": 1,
   "id": "tapemouse",
-  "version": "1.0.0",
-  "name": "Tapemouse Fabric",
+  "version": "${version}",
+  "name": "TapeMouse",
   "description": "Tapemouse port for Fabric",
   "authors": [
-    "wannadiexd"
+    "wannadiexd",
+    "dries007 (original author)"
   ],
   "license": "MIT",
-  "environment": "*",
+  "icon": "assets/tapemouse/icon.png",
+  "environment": "client",
   "entrypoints": {
     "client": [
-      "com.tapemouse.TapemouseFabric"
+      "com.wannadiexd.tapemouse.TapeMouse"
     ]
   },
+  "mixins": [
+    "tapemouse.mixins.json"
+  ],
   "depends": {
-    "fabricloader": ">=0.15.0",
+    "fabricloader": ">=0.16.0",
     "fabric-api": "*",
     "minecraft": "1.21.8",
     "java": ">=17"
