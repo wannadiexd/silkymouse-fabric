@@ -3,7 +3,6 @@
 A Fabric port of [TapeMouse](https://github.com/dries007/TapeMouse) by @dries007.
 
 Don't use this on a server that does not allow AFK farming.
-It is detectable, and I'm not planning on making it undetectable.
 Currently works with Minecraft 1.21.x. Please let me know which other versions you would like to see supported.
 
 ## How to use
@@ -11,9 +10,6 @@ Currently works with Minecraft 1.21.x. Please let me know which other versions y
 Use `/silkymouse <off|name of keybinding> [delay]`
 
 To get a list of the keybindings: `/silkymouse list`
-
-Sometimes, when you go to a menu or pause the game, it stops working.
-To restart it, activate the keybinding manually once.
 
 ## Features
 
