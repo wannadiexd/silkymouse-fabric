@@ -4,6 +4,7 @@ A Fabric port of [TapeMouse](https://github.com/dries007/TapeMouse) by @dries007
 
 Don't use this on a server that does not allow AFK farming.
 It is detectable, and I'm not planning on making it undetectable.
+Currently works with Minecraft 1.21.x. Please let me know which other versions you would like to see supported.
 
 ## How to use
 
